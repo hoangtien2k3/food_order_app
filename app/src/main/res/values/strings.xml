@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">food_order_app</string>
+    <string name="email_failed">Email Không Đúng</string>
+    <string name="email_login_failed">Email Login Không Thành Công</string>
+    <string name="email_and_password_failed">Email Login Không Thành Công</string>
+    <string name="login_successfully">Đăng Nhập Thành Công</string>
+    <string name="input_full_username_and_password">Nhập Đầy Đủ Username Và Password</string>
+    <string name="input_full_information">Hãy Nhập Đầy Đủ Thông Tin</string>
+    <string name="password_failed">Mật Khẩu Không Đúng</string>
+</resources>

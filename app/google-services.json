@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "981391636901",
+    "project_id": "foody-2f7a5",
+    "storage_bucket": "foody-2f7a5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981391636901:android:7eaca0a97898b21549504c",
+        "android_client_info": {
+          "package_name": "com.hoangtien2k3.food_order_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "981391636901-d8k5dkmg7abmd6tr21gda6hr63vt5k7u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hoangtien2k3.food_order_app",
+            "certificate_hash": "d0b04662717836a2338ddd17957881071b308ed8"
+          }
+        },
+        {
+          "client_id": "981391636901-pnil1mab9l2jajcd4bnsu407msalh5p7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRHVLO12oj-yxkHClG93gFmrv03pn9ZrI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "981391636901-pnil1mab9l2jajcd4bnsu407msalh5p7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
