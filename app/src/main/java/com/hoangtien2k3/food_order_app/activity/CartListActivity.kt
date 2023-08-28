@@ -67,11 +67,12 @@ class CartListActivity : AppCompatActivity() {
         val linearLayoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         recyclerViewList.layoutManager = linearLayoutManager
 
-        val adapter = CartListAdapter(managementCart.getListCart(), this, object : ChangeNumberItemsListener {
-            override fun changed() {
-                calculateCart()
-            }
-        })
+        val adapter =
+            CartListAdapter(managementCart.getListCart(), this, object : ChangeNumberItemsListener {
+                override fun changed() {
+                    calculateCart()
+                }
+            })
 
         // nếu trong Cart không có sản phẩm thì Text "Không Có Sản Phẩm Nào" sẽ được show lên layout
         recyclerViewList.adapter = adapter

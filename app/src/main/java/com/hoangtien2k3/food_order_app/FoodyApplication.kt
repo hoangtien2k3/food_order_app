@@ -6,6 +6,8 @@ import com.google.firebase.FirebaseApp
 
 class FoodyApplication : Application() {
 
+
+
     override fun onCreate() {
         super.onCreate()
         Log.d("App","onCreate application")

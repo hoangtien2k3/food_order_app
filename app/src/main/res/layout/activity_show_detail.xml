@@ -127,7 +127,7 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_margin="16dp"
-        android:background="@drawable/orange_button"
+        android:background="@drawable/bg_orange_button"
         android:gravity="center"
         android:text="Thêm sản phẩm"
         android:elevation="3dp"

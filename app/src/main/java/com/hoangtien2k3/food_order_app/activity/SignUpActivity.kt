@@ -34,35 +34,53 @@ class SignUpActivity : AppCompatActivity() {
             val nextSignIn = binding.txtSignInApp.text.toString()
 
             if (username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
-                Toast.makeText(this, resources.getString(R.string.input_full_information), Toast.LENGTH_LONG).show()
+                Toast.makeText(
+                    this,
+                    resources.getString(R.string.input_full_information),
+                    Toast.LENGTH_LONG
+                ).show()
                 return@setOnClickListener
             }
             if (!confirmPassword.equals(password)) {
-                Toast.makeText(this, resources.getString(R.string.password_failed), Toast.LENGTH_LONG).show()
+                Toast.makeText(
+                    this,
+                    resources.getString(R.string.password_failed),
+                    Toast.LENGTH_LONG
+                ).show()
                 return@setOnClickListener
             }
 
-            if (email.isNotEmpty() && password.isNotEmpty() && confirmPassword.isNotEmpty()){
-                if (password == confirmPassword){
-                    firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener{
-                        if (it.isSuccessful){
-                            val intent = Intent(this, SignInActivity::class.java)
-                            startActivity(intent)
-                        } else {
-                            Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+            if (email.isNotEmpty() && password.isNotEmpty() && confirmPassword.isNotEmpty()) {
+                if (password == confirmPassword) {
+                    firebaseAuth.createUserWithEmailAndPassword(email, password)
+                        .addOnCompleteListener {
+                            if (it.isSuccessful) {
+                                val intent = Intent(this, SignInActivity::class.java)
+                                startActivity(intent)
+                            } else {
+                                Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT)
+                                    .show()
+                            }
                         }
-                    }
                 } else {
-                    Toast.makeText(this, resources.getString(R.string.password_failed), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        this,
+                        resources.getString(R.string.password_failed),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             } else {
-                Toast.makeText(this, resources.getString(R.string.input_full_username_and_password), Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this,
+                    resources.getString(R.string.input_full_username_and_password),
+                    Toast.LENGTH_SHORT
+                ).show()
             }
 
         }
     }
 
-    private fun singin_form(){
+    private fun singin_form() {
         binding.txtSignInApp.setOnClickListener {
             startActivity(Intent(this, SignInActivity::class.java))
         }

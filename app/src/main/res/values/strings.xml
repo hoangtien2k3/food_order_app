@@ -7,4 +7,27 @@
     <string name="input_full_username_and_password">Nhập Đầy Đủ Username Và Password</string>
     <string name="input_full_information">Hãy Nhập Đầy Đủ Thông Tin</string>
     <string name="password_failed">Mật Khẩu Không Đúng</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="home_fragment">Home fragment</string>
+    <string name="favorite_fragment">Favorite fragment</string>
+    <string name="my_page_fragment">My Page fragment</string>
+
+    <string name="example_full_name">Hoàng Anh Tiến</string>
+    <string name="full_name">Họ và Tên</string>
+    <string name="number_phone">Số điện thoại</string>
+    <string name="hint_phone">0828-007-xxx</string>
+    <string name="address">Địa chỉ</string>
+    <string name="example_address">Số 24/62 Phùng Khoang, Nam Từ Liêm ...</string>
+    <string name="total">Tổng cộng</string>
+    <string name="payment">Thanh Toán</string>
+    <string name="cancel">Hủy</string>
+    <string name="your_information">Thông Tin Cá Nhân</string>
+    <string name="change">Thay Đổi</string>
+    <string name="gender">Giới Tính</string>
+    <string name="date_of_birth">Ngày Sinh</string>
+    <string name="date_of_birth_hint">Nhấn để chọn ngày</string>
+    <string name="text_password">Mật khẩu</string>
+    <string name="passowrd_hint">******</string>
+
+
 </resources>

@@ -16,7 +16,6 @@ class SignInActivity : BaseActivity() {
 //    retrofit , Gson, mvvm , view model, lifecycle activity và fragment
 
 
-
     private val firebaseAuth by lazy {
         FirebaseAuth.getInstance()
     }
@@ -58,29 +57,44 @@ class SignInActivity : BaseActivity() {
                 return@setOnClickListener
             }
 
-            if (email.isNotEmpty() && password.isNotEmpty()){
-                firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener{
-                    if (it.isSuccessful){
-                        Toast.makeText(this, resources.getString(R.string.login_successfully), Toast.LENGTH_SHORT).show()
+            if (email.isNotEmpty() && password.isNotEmpty()) {
+                firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
+                    if (it.isSuccessful) {
+                        Toast.makeText(
+                            this,
+                            resources.getString(R.string.login_successfully),
+                            Toast.LENGTH_SHORT
+                        ).show()
                         startActivity(Intent(this, MainActivity::class.java))
                     } else {
                         Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
                     }
                 }
             } else {
-                Toast.makeText(this, resources.getString(R.string.input_full_username_and_password), Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this,
+                    resources.getString(R.string.input_full_username_and_password),
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
 
 
         binding.apply {
             txtEmail.addTextChangedListener(object : TextWatcher {
-                override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+                override fun beforeTextChanged(
+                    s: CharSequence?,
+                    start: Int,
+                    count: Int,
+                    after: Int
+                ) {
                 }
 
                 override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                     validate.text = ""
-                    isValidEmail = emailPattern.matches(binding.txtEmail.text.toString().trim()) && s?.length ?: 0 > 0
+                    isValidEmail = emailPattern.matches(
+                        binding.txtEmail.text.toString().trim()
+                    ) && s?.length ?: 0 > 0
                     if (!isValidEmail) {
                         validate.text = resources.getString(R.string.email_failed)
                     }

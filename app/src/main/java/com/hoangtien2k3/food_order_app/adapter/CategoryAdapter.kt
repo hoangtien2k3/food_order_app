@@ -34,11 +34,11 @@ class CategoryAdapter(private val categoryDomainList: List<CategoryDomain>) : Re
         holder.categoryName.text = category.title
 
         val picResId = when (position) {
-            0 -> Pair(R.drawable.cat_background1, "cat_1")
-            1 -> Pair(R.drawable.cat_background2, "cat_2")
-            2 -> Pair(R.drawable.cat_background3, "cat_3")
-            3 -> Pair(R.drawable.cat_background4, "cat_4")
-            4 -> Pair(R.drawable.cat_background5, "cat_5")
+            0 -> Pair(R.drawable.bg_cat_background1, "cat_1")
+            1 -> Pair(R.drawable.bg_cat_background2, "cat_2")
+            2 -> Pair(R.drawable.bg_cat_background3, "cat_3")
+            3 -> Pair(R.drawable.bg_cat_background4, "cat_4")
+            4 -> Pair(R.drawable.bg_cat_background5, "cat_5")
             else -> Pair(0, "")
         }
 

@@ -6,7 +6,7 @@
     android:layout_width="75dp"
     android:layout_height="100dp"
     android:layout_margin="8dp"
-    android:background="@drawable/cat_background1"
+    android:background="@drawable/bg_cat_background1"
     android:elevation="10sp">
 
     <ImageView

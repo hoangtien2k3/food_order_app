@@ -33,10 +33,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="32dp"
-                    android:text="Hoàng Anh Tiến"
+                    android:text="ORDER FOOD"
+                    android:textAllCaps="true"
                     android:textColor="#dd3d00"
                     android:textSize="20sp"
-                    android:textStyle="bold"
+                    android:textStyle="bold|italic"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -77,7 +78,7 @@
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="32dp"
-                    android:background="@drawable/search_background"
+                    android:background="@drawable/bg_search_background"
                     android:drawableStart="@drawable/search"
                     android:drawablePadding="10dp"
                     android:ems="10"
@@ -100,7 +101,7 @@
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="32dp"
-                    android:background="@drawable/orange_light_banner"
+                    android:background="@drawable/bg_orange_light_banner"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/editTextText">
@@ -146,7 +147,7 @@
                         android:layout_marginTop="3dp"
                         android:layout_marginEnd="16dp"
                         android:layout_marginBottom="8dp"
-                        android:background="@drawable/orange_button"
+                        android:background="@drawable/bg_orange_button"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="@+id/textView7"
                         app:layout_constraintStart_toStartOf="@+id/textView7"
@@ -271,7 +272,7 @@
                         android:id="@+id/text_1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Home"
+                        android:text="Trang chủ"
                         android:textAlignment="center"
                         android:textColor="#676767"
                         android:textSize="12sp" />
@@ -294,7 +295,7 @@
                         android:id="@+id/text_2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Profile"
+                        android:text="Thông tin"
                         android:textAlignment="center"
                         android:textColor="#676767"
                         android:textSize="12sp" />
@@ -319,7 +320,7 @@
                         android:id="@+id/text_3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Cart"
+                        android:text="Giỏ hàng"
                         android:textAlignment="center"
                         android:textColor="#676767"
                         android:textSize="12sp" />
@@ -343,7 +344,7 @@
                         android:id="@+id/text_4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Support"
+                        android:text="Thông báo"
                         android:textAlignment="center"
                         android:textColor="#676767"
                         android:textSize="12sp" />
@@ -367,7 +368,7 @@
                         android:id="@+id/text_55"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Settings"
+                        android:text="Cài đặt"
                         android:textAlignment="center"
                         android:textColor="#676767"
                         android:textSize="12sp" />

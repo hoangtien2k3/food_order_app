@@ -49,18 +49,21 @@ class CartListAdapter() : RecyclerView.Adapter<CartListAdapter.ViewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView = LayoutInflater
+        val itemView: View = LayoutInflater
             .from(parent.context)
             .inflate(R.layout.viewholder_cart, parent, false)
         return ViewHolder(itemView)
     }
 
     override fun getItemCount(): Int {
-        return foodDomainList.size
+        if (foodDomainList != null) {
+            return foodDomainList.size
+        }
+        return 0;
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val currentFood = foodDomainList[position]
+        val currentFood: FoodDomain = foodDomainList[position]
 
         holder.title.text = currentFood.title
         holder.feedEachItem.text = currentFood.fee.toString()
@@ -68,15 +71,16 @@ class CartListAdapter() : RecyclerView.Adapter<CartListAdapter.ViewHolder>() {
         holder.totalEachItem.text = totalAmount
         holder.num.text = currentFood.numberInCart.toString()
 
-        val drawableResourceId = holder
-            .itemView
-            .context
-            .resources
-            .getIdentifier(currentFood.pic, "drawable", holder.itemView.context.packageName)
+        val drawableResourceId = holder // lấy ra đường dẫn đến ảnh
+            .itemView   // trỏ dến itemView đó
+            .context    // lấy ra context
+            .resources  // nó ở resource nào
+            .getIdentifier(currentFood.pic, "drawable", holder.itemView.context.packageName)    // lấy ra ảnh
 
         Glide.with(holder.itemView.context)
-            .load(drawableResourceId)
-            .into(holder.pic)
+            .load(drawableResourceId)   // load đường dẫn đến thư mục ảnh
+            .into(holder.pic) // đẩy ảnh đó lên ImageView
+
 
         // tăng số lượng sản phẩm, nếu sản phẩm về 0 thì đồng thời remove
         holder.plusItem.setOnClickListener {
